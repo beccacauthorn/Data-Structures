@@ -60,16 +60,15 @@ class LinkedList:
 
         #iterate over linked list until the second to last Node
         current = self.head 
-        while current.get_next() is not self.tail:
+        while current is not None and current.get_next() is not self.tail:
             current = current.get_next()
 
         #current is node right before the tail, set the tail to be none
-        current.set_next = None
         # keep the value before deleting it
         value = self.tail.get_value()
         # move self.tail to the node right before
         self.tail = current
-        return value 
+        return value  
 
     def contains(self, value):
         current = self.head

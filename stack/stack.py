@@ -92,7 +92,6 @@ class LinkedList:
             current = current.get_next()
 
         #current is node right before the tail, set the tail to be none
-        #current.set_next = None
         # keep the value before deleting it
         value = self.tail.get_value()
         # move self.tail to the node right before
